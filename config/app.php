@@ -151,7 +151,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
 
         //
-        Barryvdh\Cors\ServiceProvider::class,
+        //Barryvdh\Cors\ServiceProvider::class,
 
         /*
          * Application Service Providers...
