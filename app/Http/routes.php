@@ -26,6 +26,6 @@ Route::get('/', function () {
 |
 */
 
-Route::group(['prefix' => 'api'], function () {
+Route::group(['prefix' => 'api', 'middleware' => 'cors'], function () {
     Route::resource('stories', 'Api\StoriesController');
 });
