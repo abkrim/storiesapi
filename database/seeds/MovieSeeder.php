@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder
+class MovieSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,7 +11,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-         $this->call(StorySeeder::class);
-         $this->call(MovieSeeder::class);
+        DB::table('movies')->truncate();
+        factory(App\Movie::class, 20)->create();
     }
 }
