@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class StoriesController extends Controller
+class StoriesnpController extends Controller
 {
     /**
      * Display a listing of stories
@@ -18,8 +18,8 @@ class StoriesController extends Controller
     public function index()
     {
         // Without pagination onbly 20 stories
-        //$stories= Story::all();
-        $stories = Story::paginate(15);
+        $stories= Story::all();
+        //$stories = Story::paginate(15);
         return $stories;
 
 	}

@@ -12,6 +12,6 @@ class StorySeeder extends Seeder
     public function run()
     {
         DB::table('stories')->truncate();
-        factory(App\Story::class, 20)->create();
+        factory(App\Story::class, 200)->create();
     }
 }

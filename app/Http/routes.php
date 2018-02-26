@@ -29,6 +29,12 @@ Route::get('/', function () {
 // Route::group(['prefix' => 'api', 'middleware' => 'cors'], function () {
 //     Route::resource('stories', 'Api\StoriesController');
 // });
+// NO paginacion
+Route::group(['prefix' => 'api'], function () {
+    Route::resource('storiesnp', 'Api\StoriesnpController');
+});
+
+// Paginate
 Route::group(['prefix' => 'api'], function () {
     Route::resource('stories', 'Api\StoriesController');
 });
